@@ -1,67 +1,73 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Michiel van Roon &bull; Freelance front-end developer</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    </head>
-    <body>
-        <main class="text">
-            <h1>Michiel van Roon<h1>
-            <h2>Freelance Front-end Developer</h2>
-            <p><a href="mailto:michiel@michielvanroon.nl">email</a><br>
-            <a href="https://www.linkedin.com/in/michielvanroon/">linkedin</a><br>
-            <a href="https://github.com/mvanroon">github</a></p>
-        </main>
-        <style>
-            .text {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Michiel van Roon &bull; Freelance front-end developer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+  <main class="text">
+    <h1>Michiel van Roon<h1>
+      <h2>Freelance Front-end Developer</h2>
+      <p><a href="mailto:michiel@michielvanroon.nl">email</a> &bull; <a href="https://www.linkedin.com/in/michielvanroon/">linkedin</a> &bull; <a href="https://github.com/mvanroon">github</a></p>
+    </main>
+    <style>
+      .text {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+        transform: translateY(-50%);
+      }
 
-            @media screen and (min-width: 500px) {
-                h1 {
-                    font-size: 40px;
-                }
+      @media screen and (min-width: 500px) {
+        h1 {
+          font-size: 40px;
+        }
 
-                h2 {
-                    font-size: 30px;   
-                }
+        h2 {
+          font-size: 30px;   
+        }
 
-                a {
-                    font-size: ;
-                }
-            }
+        a {
+          font-size: ;
+        }
+      }
 
-            a {
-                color: inherit;
-            }
+      a {
+        color: inherit;
+      }
 
-            body {
-                cursor: url('cursor.ani'), auto;
-                text-align: center;
-                font-family: 'Montserrat', sans-serif;
-                color: white;
-                height: 100vh;
-                background-image: url('omg_hilarious_its_a_cat_typing.gif');
-                background-position: center center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                font-size:;
-            }
-        </style>
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-UA-43143395-1','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <script type="text/javascript">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: url('cursor.ani'), auto;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        height: 100vh;
+        width: 100vw;
+        background-image: url('omg_hilarious_its_a_cat_typing.gif');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-UA-43143395-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script type="text/javascript">
 // <![CDATA[
 var colour="#FFFFFF";
 var sparkles=120;
@@ -233,5 +239,5 @@ function createDiv(height, width) {
 // ]]>
 </script>
 
-    </body>
+</body>
 </html>
