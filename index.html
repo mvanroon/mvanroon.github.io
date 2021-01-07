@@ -17,53 +17,35 @@
   gtag('config', 'UA-43143395-1');
 </script>
 <script type="text/javascript">
-  var sparks = 150; // how many sparks per clicksplosion
+  var sparks = 75; // how many sparks per clicksplosion
   var speed = 33; // how fast - smaller is faster
   var bangs = 5; // how many can be launched simultaneously (note that using too many can slow the script down)
-  var colours = new Array('#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c');
-
-  /****************************
-  *   Clicksplosion Effect    *
-  *(c)2012-3 mf2fm web-design *
-  *  http://www.mf2fm.com/rv  *
-  * DON'T EDIT BELOW THIS BOX *
-  ****************************/
-  var intensity = new Array();
-  var Xpos = new Array();
-  var Ypos = new Array();
-  var dX = new Array();
-  var dY = new Array();
-  var stars = new Array();
-  var decay = new Array();
-  var timers = new Array();
+  var colours = ['#03f', '#f03', '#0e0', '#93f', '#0cf', '#f93', '#f0c'];
+  var intensity = [];
+  var Xpos = [];
+  var Ypos = [];
+  var dX = [];
+  var dY = [];
+  var stars = [];
+  var decay = [];
+  var timers = [];
   var swide = 800;
   var shigh = 600;
   var sleft = sdown = 0;
   var count = 0;
 
-  function addLoadEvent(funky) {
-    var oldonload = window.onload;
-    if (typeof (oldonload) != 'function') window.onload = funky;
-    else window.onload = function () {
-      if (oldonload) oldonload();
-      funky();
-    }
-  }
-
-  addLoadEvent(clicksplode);
+  window.addEventListener('load', clicksplode);
 
   function clicksplode() {
-    if (document.getElementById) {
-      var i, j;
-      window.onscroll = set_scroll;
-      window.onresize = set_width;
-      document.onclick = eksplode;
-      set_width();
-      set_scroll();
-      for (i = 0; i < bangs; i++) for (j = sparks * i; j < sparks + sparks * i; j++) {
-        stars[j] = createDiv('*', 13);
-        document.body.appendChild(stars[j]);
-      }
+    var i, j;
+    window.onscroll = set_scroll;
+    window.onresize = set_width;
+    document.onclick = explode;
+    set_width();
+    set_scroll();
+    for (i = 0; i < bangs; i++) for (j = sparks * i; j < sparks + sparks * i; j++) {
+      stars[j] = createDiv('*', 13);
+      document.getElementById('explosions').appendChild(stars[j]);
     }
   }
 
@@ -71,11 +53,11 @@
     var div, sty;
     div = document.createElement('div');
     sty = div.style;
-    sty.font = size + 'px monospace';
-    sty.position = 'fixed';
+    sty.fontFamily = 'monospace';
+    sty.fontSize = '12px'
+    sty.position = 'absolute';
     sty.backgroundColor = 'transparent';
     sty.visibility = 'hidden';
-    sty.zIndex = '101';
     div.appendChild(document.createTextNode(char));
     return (div);
   }
@@ -102,7 +84,7 @@
     if (A != sparks) timers[N] = setTimeout('bang(' + N + ')', speed);
   }
 
-  function eksplode(e) {
+  function explode(e) {
     var x, y, i, M, Z, N;
     set_scroll();
     y = (e) ? e.pageY : event.y + sdown;
@@ -130,43 +112,30 @@
   function set_width() {
     var sw_min = 999999;
     var sh_min = 999999;
-    if (document.documentElement && document.documentElement.clientWidth) {
-      if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
-      if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
-    }
+
+    if (document.documentElement.clientWidth > 0) sw_min = document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight > 0) sh_min = document.documentElement.clientHeight;
+
     if (typeof (self.innerWidth) == 'number' && self.innerWidth) {
       if (self.innerWidth > 0 && self.innerWidth < sw_min) sw_min = self.innerWidth;
       if (self.innerHeight > 0 && self.innerHeight < sh_min) sh_min = self.innerHeight;
     }
-    if (document.body.clientWidth) {
-      if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
-      if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
-    }
+
+    if (document.body.clientWidth > 0 && document.body.clientWidth < sw_min) sw_min = document.body.clientWidth;
+    if (document.body.clientHeight > 0 && document.body.clientHeight < sh_min) sh_min = document.body.clientHeight;
+
     if (sw_min == 999999 || sh_min == 999999) {
       sw_min = 800;
       sh_min = 600;
     }
+
     swide = sw_min - 7;
     shigh = sh_min - 7;
   }
 
   function set_scroll() {
-    if (typeof (self.pageYOffset) == 'number') {
-      sdown = self.pageYOffset;
-      sleft = self.pageXOffset;
-    }
-    else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-      sdown = document.body.scrollTop;
-      sleft = document.body.scrollLeft;
-    }
-    else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-      sleft = document.documentElement.scrollLeft;
-      sdown = document.documentElement.scrollTop;
-    }
-    else {
-      sdown = 0;
-      sleft = 0;
-    }
+    sdown = self.pageYOffset;
+    sleft = self.pageXOffset;
   }
 </script>
 
@@ -182,6 +151,21 @@
     background-color: #FFC230;
     font-family: 'Roboto Mono', "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: -.02em
+  }
+
+  #explosions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(0);
+    pointer-events: none;
+  }
+
+  .nav,
+  .main {
+    position: relative;
   }
 
   .nav {
@@ -230,6 +214,15 @@
     width: 100%;
     margin: auto;
     box-sizing: border-box;
+    padding-bottom: 3rem;
+  }
+
+  .hero {
+    max-width: 600px;
+    width: 70%;
+    height: auto;
+    margin: 3rem auto;
+    display: block;
   }
 
   @media (min-width: 576px) {
@@ -265,6 +258,10 @@
       padding: 3rem;
     }
 
+    .hero {
+      margin: 5rem auto;
+    }
+
     .container {
       width: auto;
       padding-left: 3rem;
@@ -298,6 +295,10 @@
       padding: 3rem;
     }
 
+    .hero {
+      margin: 4rem auto;
+    }
+
     .main {
       font-size: 1.6rem;
     }
@@ -309,6 +310,11 @@
 
 
   @media screen and (min-width: 768px) and (min-height: 1024px) {
+
+    .hero {
+      margin: 5rem auto;
+    }
+
     .nav {
       position: absolute;
       top: 0;
@@ -316,9 +322,11 @@
       right: 0;
     }
 
+    .container {
+      padding-bottom: 5rem;
+    }
+
     .main {
-      height: 100vh;
-      display: flex;
       font-size: 2rem;
       margin: 0;
     }
@@ -339,6 +347,7 @@
   </nav>
   <main class="main">
     <div class="container">
+      <img class="hero" src="./portrait-illustration.png" alt="Portrait Illustration" width="800" height="800" />
       <p><strong>Hi, I’m Michiel —</strong><br />
         A developer from <a href="https://en.wikipedia.org/wiki/Utrecht">Utrecht</a> who likes to code.</p>
 
@@ -362,6 +371,7 @@
           href="https://www.linkedin.com/in/dewivandewaeter/">Dewi</a>, Kip and Tofu.</p>
     </div>
   </main>
+  <div id="explosions"></div>
 </body>
 
 </html>
