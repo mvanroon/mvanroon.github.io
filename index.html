@@ -13,6 +13,10 @@
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43143395-1"></script>
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   body,
   html {
     padding: 0;
@@ -43,6 +47,7 @@
 
   .nav {
     padding: 2rem;
+    z-index: 1;
   }
 
   .links {
@@ -83,16 +88,14 @@
   .container {
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top: 2rem;
     padding-bottom: 2rem;
-    width: 100%;
     margin: auto;
     box-sizing: border-box;
     padding-bottom: 3rem;
   }
 
   .hero {
-    max-width: 600px;
+    max-width: 320px;
     width: 100%;
     height: auto;
     margin: 0 auto 3rem auto;
@@ -137,7 +140,6 @@
 
     .hero {
       margin: 5rem auto;
-      width: 400px;
     }
 
     .container {
@@ -236,6 +238,7 @@
   </nav>
   <main class="main">
     <div class="container">
+      <div><img class="hero" src="portrait-illustration.png" alt="Portrait Illustration" /></div>
       <p><strong>Hi, I’m Michiel —</strong><br /><br />
         An experienced frontend developer who likes to code for
         startups. I am particularly interested in writing elegant code to build beautiful interfaces that are fun to
