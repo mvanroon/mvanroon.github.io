@@ -2,268 +2,273 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michiel van Roon &bull; Front-end developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-  <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michiel van Roon &bull; Front-end developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43143395-1"></script>
 <style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body,
-  html {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    color: #0e0e0e;
-    background-color: #f9fbf4;
-    font-family: 'Libre Baskerville', serif;
-    letter-spacing: -.02em
-  }
-
-
-  .nav,
-  .main {
-    position: relative;
-  }
-
-  .nav {
-    padding: 2rem;
-    z-index: 1;
-  }
-
-  .links {
-    list-style: none;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  .links a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .main {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .main p {
-    line-height: 1.4;
-  }
-
-  .main p:first-child {
-    margin-top: 0;
-  }
-
-  .main em,
-  .main a {
-    font-style: normal;
-    color: #FF4D18;
-  }
-
-  .main a:hover {
-    text-decoration: none;
-  }
-
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    margin: auto;
-    box-sizing: border-box;
-    padding-bottom: 3rem;
-  }
-
-  .hero {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 3rem auto;
-    display: block;
-  }
-
-
-
-  .footer {
-    color: #333;
-    text-align: center;
-  }
-
-  @media (min-width: 576px) {
-    .nav {
-      padding: 2rem;
+    * {
+        box-sizing: border-box;
     }
 
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-
-
-  @media (max-width: 767px) {
-
-    .links li+li {
-      margin-top: 4px;
+    body,
+    html {
+        padding: 0;
+        margin: 0;
     }
 
-  }
-
-  @media (min-width: 768px) {
-    .links {
-      font-size: 1.4rem;
+    body {
+        color: #0e0e0e;
+        background-color: #f9fbf4;
+        font-family: 'Libre Baskerville', serif;
+        letter-spacing: -.02em
     }
 
-    .nav {
-      padding: 3rem;
-    }
 
-    .hero {
-      margin: 5rem auto;
-    }
-
-    .container {
-      width: auto;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
-
-    .mr-md-auto {
-      margin-right: auto;
-    }
-
-    .ml-md-3 {
-      margin-left: 3rem;
-    }
-
-    .d-md-none {
-      display: none;
-    }
-
+    .nav,
     .main {
-      font-size: 1.6rem;
+        position: relative;
     }
 
+    .nav {
+        padding: 2rem;
+        z-index: 1;
+    }
 
     .links {
-      display: flex;
-    }
-  }
-
-  @media screen and (min-width: 992px) {
-    .nav {
-      padding: 3rem;
+        list-style: none;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
     }
 
-    .hero {
-      margin: 4rem auto;
+    .links a {
+        color: inherit;
+        text-decoration: none;
     }
 
     .main {
-      font-size: 1.6rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .main p {
+        line-height: 1.4;
+    }
+
+    .main p:first-child {
+        margin-top: 0;
+    }
+
+    .main em,
+    .main a {
+        font-style: normal;
+        color: #FF4D18;
+    }
+
+    .main a:hover {
+        text-decoration: none;
     }
 
     .container {
-      max-width: 770px;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        margin: auto;
+        box-sizing: border-box;
+        padding-bottom: 3rem;
     }
-  }
-
-
-
-
-
-  @media screen and (min-width: 768px) and (min-height: 1024px) {
 
     .hero {
-      margin: 5rem auto;
-    }
-
-    .nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .container {
-      padding-bottom: 5rem;
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-    }
-
-    .main {
-      font-size: 1.8rem;
-      margin: 0;
+        max-width: 320px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto 3rem auto;
+        display: block;
     }
 
 
-  }
+
+    .footer {
+        color: #333;
+        text-align: center;
+    }
+
+    @media (min-width: 576px) {
+        .nav {
+            padding: 2rem;
+        }
+
+        .container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+
+    @media (max-width: 767px) {
+
+        .links li+li {
+            margin-top: 4px;
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        .links {
+            font-size: 1.4rem;
+        }
+
+        .nav {
+            padding: 3rem;
+        }
+
+        .hero {
+            margin: 5rem auto;
+        }
+
+        .container {
+            width: auto;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .mr-md-auto {
+            margin-right: auto;
+        }
+
+        .ml-md-3 {
+            margin-left: 3rem;
+        }
+
+        .d-md-none {
+            display: none;
+        }
+
+        .main {
+            font-size: 1.6rem;
+        }
+
+
+        .links {
+            display: flex;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .nav {
+            padding: 3rem;
+        }
+
+        .hero {
+            margin: 4rem auto;
+        }
+
+        .main {
+            font-size: 1.6rem;
+        }
+
+        .container {
+            max-width: 770px;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+
+
+
+
+    @media screen and (min-width: 768px) and (min-height: 1024px) {
+
+        .hero {
+            margin: 5rem auto;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .container {
+            padding-bottom: 5rem;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+
+        .main {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+
+    }
 </style>
 
 <body>
-  <nav class="nav">
-    <ul class="links">
-      <li class="mr-md-auto">Michiel van Roon</li>
-      <li class="d-md-none">—</li>
-      <li class="ml-md-3"><a href="mailto:michiel@michielvanroon.nl" title="Send me an email">Email↘</a></li>
-      <li class="ml-md-3"><a href="https://www.linkedin.com/in/michielvanroon/"
-          title="Michiel van Roon | LinkedIn">LinkedIn↘</a>
-      </li>
-      <li class="ml-md-3"><a href="https://github.com/mvanroon" title="Michiel van Roon | GitHub">GitHub↘</a></li>
-    </ul>
-  </nav>
-  <main class="main">
-    <div class="container">
-      <div><img class="hero" src="portrait-illustration.png" alt="Portrait Illustration" /></div>
-      <p><strong>Hi, I’m Michiel —</strong><br /><br />
-        An experienced front-end developer who likes to code for
-        startups. I am particularly interested in writing elegant code to build beautiful interfaces that are fun to
-        interact with. I've got a solid grasp of our industry, great communication skills, and some extra experience in stuff like UI/UX design, project management, copywriting, SEO, and SEA. Oh and I'm also a
-        certified pizzaiolo!🍕</p>
+    <nav class="nav">
+        <ul class="links">
+            <li class="mr-md-auto">Michiel van Roon</li>
+            <li class="d-md-none">—</li>
+            <li class="ml-md-3"><a href="mailto:michiel@michielvanroon.nl" title="Send me an email">Email↘</a></li>
+            <li class="ml-md-3"><a href="https://www.linkedin.com/in/michielvanroon/"
+                    title="Michiel van Roon | LinkedIn">LinkedIn↘</a>
+            </li>
+            <li class="ml-md-3"><a href="https://github.com/mvanroon" title="Michiel van Roon | GitHub">GitHub↘</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="container">
+            <div><img class="hero" src="portrait-illustration.png" alt="Portrait Illustration" /></div>
+            <p><strong>Hi, I’m Michiel —</strong><br /><br />
+                An experienced front-end developer who likes to code for
+                startups.</p>
+            <p>I am particularly interested in writing elegant code to build beautiful interfaces that are fun to
+                interact with. I've got a solid grasp of our industry, great communication skills, and some extra
+                experience in stuff like UI/UX design, project management, copywriting and SEO.</p>
+            <p>Oh and I'm also a
+                certified pizzaiolo!🍕</p>
 
-        <p>I'm currently the lead front-end developer at <a href="https://reverseddigital.com/">Reversed Digital</a> where I work implementing user-friendly and visually appealing interfaces for web and mobile applications.</p>
+            <p>I'm currently the lead front-end developer at <a href="https://reverseddigital.com/">Reversed Digital</a>
+                where I work on implementing user-friendly and visually appealing interfaces for web and mobile
+                applications.</p>
 
-      <p>Before that I co-owned a <a href="https://www.peakfijn.nl">startup studio</a> together with <a href="https://www.linkedin.com/in/guensberg/">Willem</a> and <a
-          href="https://www.linkedin.com/in/peter-slump-291677a/">Peter</a> where I developed
-        software for
-        (aspiring) entrepreneurs and helped them launch their digital product in a matter of months or even weeks.</p>
+            <p>Before that I co-owned a <a href="https://www.peakfijn.nl">startup studio</a> together with <a
+                    href="https://www.linkedin.com/in/guensberg/">Willem</a> and <a
+                    href="https://www.linkedin.com/in/peter-slump-291677a/">Peter</a> where I developed
+                software for
+                (aspiring) entrepreneurs and helped them launch their digital product in a matter of months or even
+                weeks.</p>
 
-      <p>My brother-in-law <a
-          href="https://www.linkedin.com/in/senior-django-freelance-developer-netherlands/">Michael</a> and I
-        built an app called <a href="https://www.erbij.app">Erbij</a> that makes inviting people to your
-        events a lot easier.</p>
+            <p>My brother-in-law <a
+                    href="https://www.linkedin.com/in/senior-django-freelance-developer-netherlands/">Michael</a> and I
+                built an app called <a href="https://www.erbij.app">Erbij</a> that makes inviting people to your
+                events a lot easier.</p>
 
-      <p>In my spare time I like to cook (and eat!) and play football.
-        <p />
-      <p>I live with <a href="https://www.linkedin.com/in/dewivandewaeter/">Dewi</a>, our sons Ezra and Joep and our
-        cats Kip and
-        Tofu.</p>
-    </div>
-  </main>
-  <div id="explosions"></div>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+            <p>In my spare time I like to cook (and eat!) and play football.<p />
+            <p>I live with <a href="https://www.linkedin.com/in/dewivandewaeter/">Dewi</a>, our sons Ezra and Joep and
+                our cats Kip and Tofu.</p>
+        </div>
+    </main>
+    <div id="explosions"></div>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-43143395-1');
-  </script>
+        gtag('config', 'UA-43143395-1');
+    </script>
 </body>
 
 </html>
